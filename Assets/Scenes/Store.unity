@@ -7655,11 +7655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563409839669947138, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 0.52717876
       objectReference: {fileID: 0}
     - target: {fileID: 3563409839669947138, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.3712666
       objectReference: {fileID: 0}
     - target: {fileID: 3563409839669947138, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7700,6 +7700,14 @@ PrefabInstance:
     - target: {fileID: 7976339964905844632, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Name
       value: Player_Store
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002230143770731299, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002230143770731299, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
+      propertyPath: m_Size.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8141,5 +8149,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1517755622}
   - {fileID: 566858069}
-  - {fileID: 1927402748}
   - {fileID: 178987211}
+  - {fileID: 1927402748}
