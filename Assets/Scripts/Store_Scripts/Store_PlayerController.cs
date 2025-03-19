@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         // Movement code
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
             //Debug.Log(moveValue);
-        rigidBody.linearVelocity = moveValue * speed;
+        rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
 
         // Interact code
         bool interactValue = interactAction.IsPressed();
