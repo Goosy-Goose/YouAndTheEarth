@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody2D rigidBody;
+    public Collider2D interactionCollider;
     public float speed;
 
     InputAction moveAction;
