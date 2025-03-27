@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fad9a63f2e9bf4aa1dda5217d70829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptText: Go to level?
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}

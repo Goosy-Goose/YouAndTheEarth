@@ -4,11 +4,8 @@ public class Store_Door : Store_Item
 {
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
+    // use Store_Item Start() function
+    /* void Start() {} */
 
     // Update is called once per frame
     void Update()
