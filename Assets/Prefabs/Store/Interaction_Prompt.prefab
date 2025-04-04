@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: f786e17d30e369244ab609dbef893dea, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ TextMesh:
   m_GameObject: {fileID: 2219969979205751469}
   m_Text: "if you're seeing this, \nsomething went wrong"
   m_OffsetZ: 0
-  m_CharacterSize: 0.02
+  m_CharacterSize: 0.015
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -113,7 +113,7 @@ TextMesh:
   m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 0
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 12800000, guid: f786e17d30e369244ab609dbef893dea, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
