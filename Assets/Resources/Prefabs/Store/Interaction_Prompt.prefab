@@ -104,7 +104,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2219969979205751469}
   m_Text: "if you're seeing this, \nsomething went wrong"
-  m_OffsetZ: 0
+  m_OffsetZ: -6
   m_CharacterSize: 0.015
   m_LineSpacing: 1
   m_Anchor: 4

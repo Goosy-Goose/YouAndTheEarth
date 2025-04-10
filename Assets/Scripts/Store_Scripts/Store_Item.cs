@@ -5,12 +5,18 @@ public class Store_Item : MonoBehaviour
 
     public string promptText;
     public GameObject interactionPrompt;
+
     GameObject promptObj;
+    protected bool isUnlocked;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Debug.Log("Store_Item " + gameObject.name + " created");
+        //DELETE THIS LINE LATER
+        setLock(false);
+
+        
     }
 
     // Update is called once per frame
@@ -38,5 +44,11 @@ public class Store_Item : MonoBehaviour
         /* Debug.Log("Collider on " + other.gameObject.name + 
          * " exited collider on " + gameObject.name);*/
         Destroy(promptObj);
+    }
+
+    public void setLock(bool lockStatus) { 
+        isUnlocked = lockStatus;
+        if (isUnlocked) { GetComponent<SpriteRenderer>().color = Color.white; }
+        else { GetComponent<SpriteRenderer>().color = Color.black; }
     }
 }

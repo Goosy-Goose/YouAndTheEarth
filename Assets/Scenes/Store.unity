@@ -10478,6 +10478,7 @@ GameObject:
   - component: {fileID: 510720472}
   - component: {fileID: 510720471}
   - component: {fileID: 510720470}
+  - component: {fileID: 510720473}
   m_Layer: 0
   m_Name: KittyLitter_Item
   m_TagString: Untagged
@@ -10515,7 +10516,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10601,6 +10602,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &510720473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510720469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Cat Litter
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1 &656261122
 GameObject:
   m_ObjectHideFlags: 0
@@ -14455,6 +14470,7 @@ GameObject:
   - component: {fileID: 1001488296}
   - component: {fileID: 1001488295}
   - component: {fileID: 1001488294}
+  - component: {fileID: 1001488297}
   m_Layer: 0
   m_Name: Backpack_Item
   m_TagString: Untagged
@@ -14578,6 +14594,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001488297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001488293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Backpack
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1 &1092198463
 GameObject:
   m_ObjectHideFlags: 0
@@ -15073,6 +15103,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1859861147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859861149}
+  - component: {fileID: 1859861148}
+  m_Layer: 0
+  m_Name: StoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859861148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859861147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec95e955c3d46b942b229d3143f14c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeItems:
+  - {fileID: 1001488293}
+  - {fileID: 1861741569}
+  - {fileID: 2001735023}
+  - {fileID: 1963288038}
+  - {fileID: 2011102264}
+  - {fileID: 510720469}
+--- !u!4 &1859861149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859861147}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.49311066, y: 0.10976739, z: 0.09541661}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861741569
 GameObject:
   m_ObjectHideFlags: 0
@@ -15084,6 +15165,7 @@ GameObject:
   - component: {fileID: 1861741572}
   - component: {fileID: 1861741571}
   - component: {fileID: 1861741570}
+  - component: {fileID: 1861741573}
   m_Layer: 0
   m_Name: Compost_Item
   m_TagString: Untagged
@@ -15121,7 +15203,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -15207,6 +15289,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861741573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861741569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Compost
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1 &1924706342
 GameObject:
   m_ObjectHideFlags: 0
@@ -15479,6 +15575,7 @@ GameObject:
   - component: {fileID: 1963288041}
   - component: {fileID: 1963288040}
   - component: {fileID: 1963288039}
+  - component: {fileID: 1963288042}
   m_Layer: 0
   m_Name: Journal_Item
   m_TagString: Untagged
@@ -15516,7 +15613,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -15602,6 +15699,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1963288042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963288038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Journal
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1 &2001735023
 GameObject:
   m_ObjectHideFlags: 0
@@ -15613,6 +15724,7 @@ GameObject:
   - component: {fileID: 2001735026}
   - component: {fileID: 2001735025}
   - component: {fileID: 2001735024}
+  - component: {fileID: 2001735027}
   m_Layer: 0
   m_Name: PhoneCase_Item
   m_TagString: Untagged
@@ -15650,7 +15762,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -15736,6 +15848,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001735027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001735023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Phone Case
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1 &2011102264
 GameObject:
   m_ObjectHideFlags: 0
@@ -15747,6 +15873,7 @@ GameObject:
   - component: {fileID: 2011102267}
   - component: {fileID: 2011102266}
   - component: {fileID: 2011102265}
+  - component: {fileID: 2011102268}
   m_Layer: 0
   m_Name: Birdhouse_Item
   m_TagString: Untagged
@@ -15784,7 +15911,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -15870,6 +15997,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011102268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011102264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Birdhouse
+  interactionPrompt: {fileID: 2219969979205751469, guid: cdf44dbd2945fd549800add9b97c7a53, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -15887,3 +16028,4 @@ SceneRoots:
   - {fileID: 1963288041}
   - {fileID: 2011102267}
   - {fileID: 510720472}
+  - {fileID: 1859861149}
