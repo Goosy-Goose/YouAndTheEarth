@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public PlayerInput playerInput;
     public Rigidbody2D rigidBody;
     public Collider2D interactionCollider;
     public float speed;
@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Sets the action map to game settings
+        playerInput.SwitchCurrentActionMap("PlayerGame");
+
         // Find the references to the "Move" and "Interact" actions
         moveAction = InputSystem.actions.FindAction("Move");
         interactAction = InputSystem.actions.FindAction("Interact");

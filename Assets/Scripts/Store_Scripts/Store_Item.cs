@@ -8,15 +8,16 @@ public class Store_Item : MonoBehaviour
 
     GameObject promptObj;
     protected bool isUnlocked;
+    protected bool playerInCollider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Store_Item " + gameObject.name + " created");
+        //Debug.Log("Store_Item " + gameObject.name + " created");
         //DELETE THIS LINE LATER
         setLock(false);
 
-        
+        playerInCollider = false;
     }
 
     // Update is called once per frame
@@ -37,6 +38,7 @@ public class Store_Item : MonoBehaviour
                                                        transform.position.y + 1.1f, 
                                                        0);
         }
+        playerInCollider = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -44,6 +46,7 @@ public class Store_Item : MonoBehaviour
         /* Debug.Log("Collider on " + other.gameObject.name + 
          * " exited collider on " + gameObject.name);*/
         Destroy(promptObj);
+        playerInCollider = false;
     }
 
     public void setLock(bool lockStatus) { 

@@ -455,6 +455,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5505414964534828549, guid: 78577f39d67aa5c429a7f7c090c78e66, type: 3}
+      propertyPath: m_Size.x
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505414964534828549, guid: 78577f39d67aa5c429a7f7c090c78e66, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
     - target: {fileID: 8540993238905846674, guid: 78577f39d67aa5c429a7f7c090c78e66, type: 3}
       propertyPath: m_Name
       value: door_store
@@ -10762,11 +10770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5672583020291813327, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Size.x
-      value: 0.82973623
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 5672583020291813327, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Size.y
-      value: 0.3422264
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 5672583020291813327, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Offset.x
@@ -10774,8 +10782,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5672583020291813327, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Offset.y
-      value: -0.36337847
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7969644390899419955, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1822423108}
     - target: {fileID: 7976339964905844632, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
       propertyPath: m_Name
       value: Player_Store
@@ -14252,7 +14264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001488293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088eb031ebf803749b78a6527281daad, type: 3}
+  m_Script: {fileID: 11500000, guid: 51f582c6bcd8d1c4a9388cf3bad894a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: Backpack
@@ -14757,6 +14769,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1822423108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3575715292879916731, guid: 7233cec77a72d4d4e8265b25821d7f23, type: 3}
+  m_PrefabInstance: {fileID: 818956226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1834557209
 GameObject:
   m_ObjectHideFlags: 0
@@ -15162,7 +15185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924706342}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16307,7 +16330,6 @@ SceneRoots:
   - {fileID: 818956226}
   - {fileID: 178987211}
   - {fileID: 1927402748}
-  - {fileID: 1924706345}
   - {fileID: 1940407885}
   - {fileID: 1642270982}
   - {fileID: 1001488296}
@@ -16317,3 +16339,4 @@ SceneRoots:
   - {fileID: 2011102267}
   - {fileID: 510720472}
   - {fileID: 1859861149}
+  - {fileID: 1924706345}
