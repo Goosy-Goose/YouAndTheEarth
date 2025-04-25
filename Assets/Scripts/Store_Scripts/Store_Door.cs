@@ -6,9 +6,9 @@ public class Store_Door : Store_Item
     void Start() { isUnlocked = true; }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-
+        base.Update();
     }
 
     

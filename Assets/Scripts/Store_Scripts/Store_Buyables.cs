@@ -9,12 +9,14 @@ public class Store_Buyables : Store_Item
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if (playerInCollider)
-        {
-            Debug.Log("Player in collider: " + name);
-            // if player clicks f, open menu
-        }
+        base.Update();
+    }
+
+    protected override void doInteraction()
+    {
+        base.doInteraction();
+        Debug.Log("Child Interaction");
     }
 }

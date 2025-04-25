@@ -30,16 +30,18 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
 
-
     void MovePlayer()
     {
         // Movement code
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
-            //Debug.Log(moveValue);
+        //Debug.Log(moveValue);
         rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
-
-        // Interact code
-        bool interactValue = interactAction.IsPressed();
         
     }
+
+    public bool isInteractPressed() {
+        //Debug.Log("Player Controller interactAction.IsPressed is " + interactAction.IsPressed());
+        return interactAction.IsPressed();
+    }
+    
 }
