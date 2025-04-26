@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701a2a67d41601647a9576c9b7c638a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
+  playerInput: {fileID: 3575715292879916731}
   rigidBody: {fileID: 2352740016372659525}
   interactionCollider: {fileID: 5672583020291813327}
   speed: 5
@@ -245,6 +245,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: PlayerGame
+  m_DefaultActionMap: PlayerStore
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

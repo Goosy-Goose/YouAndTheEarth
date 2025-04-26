@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Sets the action map to game settings
-        playerInput.SwitchCurrentActionMap("PlayerGame");
-
         // Find the references to the "Move" and "Interact" actions
         moveAction = InputSystem.actions.FindAction("Move");
         interactAction = InputSystem.actions.FindAction("Interact");
