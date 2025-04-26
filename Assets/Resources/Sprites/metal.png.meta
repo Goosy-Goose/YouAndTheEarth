@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c585c7e4945e49e6bf6b74f7b494499
+guid: 3bc8c447de90944eea122325bceac4e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4271597886895176301
-    second: fabric trash_0
+      213: -76982044855044179
+    second: pxArt_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fabric trash_0
+      name: pxArt_0
       rect:
         serializedVersion: 2
-        x: 105
-        y: 57
-        width: 652
-        height: 452
+        x: 3
+        y: 0
+        width: 496
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 395cd409a5c38b4c0800000000000000
-      internalID: -4271597886895176301
+      spriteID: da7f452fc318eeef0800000000000000
+      internalID: -76982044855044179
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fabric trash_0: -4271597886895176301
+      pxArt_0: -76982044855044179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
