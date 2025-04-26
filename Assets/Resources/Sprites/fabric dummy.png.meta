@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d454f7a50bf004427977cf84ed5ce2c4
+guid: 3667ccbd804a14588a7c8b4f239d6f17
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8304395455000957101
-    second: Glass_Bottle-removebg-preview_0
+      213: -6569003975054588114
+    second: pxArt (6)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glass_Bottle-removebg-preview_0
+      name: pxArt (6)_0
       rect:
         serializedVersion: 2
-        x: 187
-        y: 57
-        width: 106
-        height: 391
+        x: 70
+        y: 32
+        width: 451
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35fac4e055cd0cc80800000000000000
-      internalID: -8304395455000957101
+      spriteID: e270eb250b536d4a0800000000000000
+      internalID: -6569003975054588114
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pxArt (6)_0: -6569003975054588114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

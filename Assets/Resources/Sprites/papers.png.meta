@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d71a06b301e9c45228fe44c6eb55f128
+guid: ec9ce4126fc7d4c4297ed2d963e2d5bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3113040042800264902
-    second: mixed-paper-removebg-preview_0
+      213: -7131844271009652847
+    second: pxArt (5)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mixed-paper-removebg-preview_0
+      name: pxArt (5)_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 34
-        width: 592
-        height: 332
+        x: 11
+        y: 26
+        width: 601
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c63da2ec6db33b20800000000000000
-      internalID: 3113040042800264902
+      spriteID: 19f9011fb69960d90800000000000000
+      internalID: -7131844271009652847
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pxArt (5)_0: -7131844271009652847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

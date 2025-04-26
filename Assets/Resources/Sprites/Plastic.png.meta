@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ae84629f6f3d445892e278db6561741
+guid: 16396c0994a924929863947c66605698
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 909387659453385224
-    second: EmugKM-removebg-preview_0
+      213: -9093685398306249331
+    second: pxArt (4)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmugKM-removebg-preview_0
+      name: pxArt (4)_0
       rect:
         serializedVersion: 2
-        x: 240
-        y: 15
-        width: 183
-        height: 321
+        x: 189
+        y: 47
+        width: 109
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80ac7d4124bce9c00800000000000000
-      internalID: 909387659453385224
+      spriteID: d85acc68f4dbcc180800000000000000
+      internalID: -9093685398306249331
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EmugKM-removebg-preview_0: 909387659453385224
+      pxArt (4)_0: -9093685398306249331
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
