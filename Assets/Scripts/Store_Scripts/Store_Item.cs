@@ -1,5 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
+public class Recipe{
+    public string Material_name;
+    public int quantity;
+}
 public class Store_Item : MonoBehaviour
 {
 
@@ -8,6 +13,8 @@ public class Store_Item : MonoBehaviour
 
     GameObject promptObj;
     protected GameObject playerObj;
+
+    public List<Recipe> list;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
