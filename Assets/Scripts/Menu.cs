@@ -5,23 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] GameObject menuUI;
+
+    private GameObject pauseMenu;
 
     void Start()
     {
-        menuUI.SetActive(false);
+        pauseMenu = Menu_Manager.instance.pauseMenu;
+        pauseMenu.SetActive(false);
     }
+    // Menus set inactive by the Menu Manager
 
     public void Pause()
     {
-        menuUI.SetActive(true);
-        Time.timeScale = 0;
+        Menu_Manager.instance.openMenu(pauseMenu);
     }
 
     public void Resume()
     {
-        menuUI.SetActive(false);
-        Time.timeScale = 1;
+        Menu_Manager.instance.closeMenu(pauseMenu);
     }
 
     public void GoStartPage()

@@ -19,6 +19,6 @@ public class Store_Interaction_Prompt : MonoBehaviour
 
     void OnDestroy()
     {
-        Debug.Log("Destroyed " + gameObject.name);
+        //Debug.Log("Destroyed " + gameObject.name);
     }
 }

@@ -6,9 +6,12 @@ public class Store_Buyables : Store_Item
     [SerializeField] private string description;
     [SerializeField] private bool isUnlocked;
 
+    private GameObject buyableMenu;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        buyableMenu = Menu_Manager.instance.buyablesMenu;
         setLock(false);
     }
 
@@ -20,9 +23,17 @@ public class Store_Buyables : Store_Item
     protected override void doInteraction()
     {
         base.doInteraction();
-        Debug.Log("Child Interaction");
         // open the buyables menu from menu manager? first set all the stuff in it?
-        Menu_Manager.instance.buyablesMenu.SetActive(true);
+        // send in buyableName, description, isUnlocked, image (sprite renderer), and recipe
+
+        if (Menu_Manager.instance.openMenu(buyableMenu))
+        {
+            // send all the info?
+            Sprite buyableSprite = GetComponent<SpriteRenderer>().sprite;
+            // v fucks up when isunlocked is set to true
+            buyableMenu.GetComponent<Buyables_Menu>().setMenuInfo(buyableName, isUnlocked, description, buyableSprite);
+            //Debug.Log(buyableMenu.GetComponent<Buyables_Men>);
+        }
 
     }
 
