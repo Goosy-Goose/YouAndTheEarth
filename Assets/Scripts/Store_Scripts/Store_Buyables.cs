@@ -30,15 +30,7 @@ public class Store_Buyables : Store_Item
         {
             // send all the info?
             Sprite buyableSprite = GetComponent<SpriteRenderer>().sprite;
-            // v fucks up when isunlocked is set to true
-            //if (buyableName) { Debug.Log("buyableName"); }
-            //if (!isUnlocked) { Debug.Log("isunlocked"); }
-            //if (!description) { Debug.Log("description"); }
-            //if (!buyableSprite) { Debug.Log("buyablesprite"); }
-            //if (!buyableMenu) { Debug.Log("no buyablemenu wtf"); } else { Debug.Log("there exists a buyableMenu"); }
-            //Debug.Log(buyableMenu.GetComponent<Buyables_Menu>());
             buyableMenu.GetComponent<Buyables_Menu>().setMenuInfo(buyableName, isUnlocked, description, buyableSprite);
-            //Debug.Log(buyableMenu.GetComponent<Buyables_Men>);
         }
 
     }

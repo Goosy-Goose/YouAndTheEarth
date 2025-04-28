@@ -41,12 +41,15 @@ public class Buyables_Menu : MonoBehaviour
         GameObject titleField = GameObject.Find("PostItTitleTMP");
         GameObject textField = GameObject.Find("PostItTextTMP");
         GameObject unlockButton = GameObject.Find("UnlockButton");
+
         if (isUnlocked){ 
             titleField.GetComponent<TMPro.TextMeshProUGUI>().text = "Description";
             textField.GetComponent<TMPro.TextMeshProUGUI>().text = description;
-            unlockButton.SetActive(false);
+            if (unlockButton) { unlockButton.SetActive(false); }
         }
-        else { titleField.GetComponent<TMPro.TextMeshProUGUI>().text = "Recipe"; }
+        else { 
+            titleField.GetComponent<TMPro.TextMeshProUGUI>().text = "Recipe"; 
+        }
     }
 
     public void Unlock()
