@@ -27,7 +27,7 @@ public class Menu_Manager : MonoBehaviour
         isAMenuOpen = false;
         foreach (GameObject menu in menusList)
         {
-            if (menu.activeSelf) {  isAMenuOpen=true; break; }
+            if (menu && menu.activeSelf) {  isAMenuOpen=true; break; }
         }
         
         // if escape key pressed, either close all menus or open the pause menu

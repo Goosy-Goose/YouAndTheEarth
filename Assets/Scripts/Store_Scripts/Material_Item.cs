@@ -17,8 +17,8 @@ public class Material_Item : MonoBehaviour
         
     }
 
-    void Collect(){
-        Inventory.inventory.Add_material(Material_name,quantity); // add the material to inventory
-        gameObject.SetActive(false); // deactivate
-    }
+    // void Collect(){
+    //     Inventory.inventory.Add_material(Material_name,quantity); // add the material to inventory
+    //     gameObject.SetActive(false); // deactivate
+    // }
 }
