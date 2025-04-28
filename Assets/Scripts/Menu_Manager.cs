@@ -18,8 +18,6 @@ public class Menu_Manager : MonoBehaviour
         foreach (GameObject menu in menusList) { 
             menu.SetActive(false);
         }
-        //pauseMenu.SetActive(false);
-        //buyablesMenu.SetActive(false);
         isAMenuOpen = false;
     }
 

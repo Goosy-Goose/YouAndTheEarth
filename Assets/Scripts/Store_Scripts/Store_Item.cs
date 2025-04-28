@@ -14,7 +14,7 @@ public class Store_Item : MonoBehaviour
     GameObject promptObj;
     protected GameObject playerObj;
 
-    public List<Recipe> list;
+    public List<Recipe> recipeList;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
