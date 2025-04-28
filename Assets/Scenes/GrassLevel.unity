@@ -3866,7 +3866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4932da722a6d94b88a799eccd9f5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 536929143}
   buyablesMenu: {fileID: 0}
   menusList: []
 --- !u!4 &1966114456
