@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +8,9 @@ public class LevelPlayerController : MonoBehaviour
     public Rigidbody2D rigidBody;
     public Collider2D interactionCollider;
     public float speed;
-    public float jumpPower;
+    public float jumpPower = 4.0f;
+    bool isJumping = false;
+    bool isGrounded = false;
 
     InputAction moveAction;
     InputAction interactAction;
@@ -30,22 +33,46 @@ public class LevelPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
+        if(isGrounded){
+            isJumping=false;
+        }
+        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+        // moveValue = new Vector2(moveValue.x, 0);
+        // rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
+        if (Input.GetButtonDown("Jump") && !isJumping){
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, jumpPower);
+            isJumping=true;
+            Debug.Log(rigidBody.linearVelocity.y);
+            Debug.Log("jump pressed");
+        }
+        else if(!isJumping && !isGrounded){
+            Debug.Log("not jumping, not grounded");
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, rigidBody.linearVelocityY);
+        }
+        else if (!isJumping && isGrounded){
+            Debug.Log("not jumping, grounded");
+            rigidBody.linearVelocity = new Vector2(moveValue.x * speed, 0);
+
+        }
+        
+        // Debug.Log(isGrounded);
     }
 
     void MovePlayer()
     {
-        // Movement code
+    //     // Movement code
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         // moveValue = new Vector2(moveValue.x, 0);
-        if (jumpAction.WasPressedThisFrame()){
-            moveValue = new Vector2(moveValue.x, jumpPower);
-            Debug.Log("jump pressed");
-        }
+    //     if (jumpAction.WasPressedThisFrame() && !isJumping){
+    //         moveValue = new Vector2(moveValue.x, jumpPower);
+    //         Debug.Log("jump pressed");
+    //     }
         
-        //Debug.Log(moveValue);
+    //     //Debug.Log(moveValue);
         rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
-        // Debug.Log(rigidBody.linearVelocity);
+    //     // if (rigidBody.linearVelocity.y > 0){
+    //     //     Debug.Log(rigidBody.linearVelocity.y);
+    //     // }
     }
 
     public bool isInteractPressed()
@@ -57,9 +84,10 @@ public class LevelPlayerController : MonoBehaviour
     // Code for collecting item //
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // isJumping = false;
         if (collision.CompareTag("Platform")) // make sure platform tiles are set to "Platform" tag; check if player is touching the ground
         {
-            // isGrounded = true;
+            isGrounded = true;
         }
         else if (collision.CompareTag("Item") && collision.gameObject.activeSelf) // make sure all collectible items are set to "Item" tag
         {
