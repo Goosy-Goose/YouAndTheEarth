@@ -33,51 +33,38 @@ public class LevelPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isGrounded){
-            isJumping=false;
-        }
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
-        // moveValue = new Vector2(moveValue.x, 0);
-        // rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
-        if (Input.GetButtonDown("Jump") && !isJumping){
-            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, jumpPower);
-            isJumping=true;
-            Debug.Log(rigidBody.linearVelocity.y);
-            Debug.Log("jump pressed");
-        }
-        else if(!isJumping && !isGrounded){
-            Debug.Log("not jumping, not grounded");
-            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, rigidBody.linearVelocityY);
-        }
-        else if (!isJumping && isGrounded){
-            Debug.Log("not jumping, grounded");
-            rigidBody.linearVelocity = new Vector2(moveValue.x * speed, 0);
-
-        }
-        
-        // Debug.Log(isGrounded);
+        MovePlayer();
     }
 
     void MovePlayer()
     {
-    //     // Movement code
+        // Y VALUES DEPENDING ON JUMP
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
-        // moveValue = new Vector2(moveValue.x, 0);
-    //     if (jumpAction.WasPressedThisFrame() && !isJumping){
-    //         moveValue = new Vector2(moveValue.x, jumpPower);
-    //         Debug.Log("jump pressed");
-    //     }
-        
-    //     //Debug.Log(moveValue);
-        rigidBody.linearVelocity = moveValue * speed /* * Time.deltaTime*/;
-    //     // if (rigidBody.linearVelocity.y > 0){
-    //     //     Debug.Log(rigidBody.linearVelocity.y);
-    //     // }
+        moveValue = moveValue * speed;
+        if (Input.GetButtonDown("Jump") && !isJumping)
+        {
+            moveValue.y = jumpPower;
+            isJumping = true;
+        }
+        else if (!isJumping && isGrounded) { moveValue.y = 0; }
+        else { moveValue.y = rigidBody.linearVelocity.y; }
+
+        // X MOMENTUM
+        if (rigidBody.linearVelocity.x > 0 && moveValue.x >= 0)
+        {
+            moveValue.x = Mathf.Max(moveValue.x, rigidBody.linearVelocity.x) - 0.05f;
+        }
+        else if (rigidBody.linearVelocity.x < 0 && moveValue.x <= 0)
+        {
+            moveValue.x = Mathf.Min(moveValue.x, rigidBody.linearVelocity.x) + 0.05f;
+        }
+
+        // SET VELOCITY
+        rigidBody.linearVelocity = new Vector2(moveValue.x, moveValue.y);
     }
 
     public bool isInteractPressed()
     {
-        //Debug.Log("Player Controller interactAction.IsPressed is " + interactAction.IsPressed());
         return interactAction.IsPressed();
     }
 
@@ -88,6 +75,7 @@ public class LevelPlayerController : MonoBehaviour
         if (collision.CompareTag("Platform")) // make sure platform tiles are set to "Platform" tag; check if player is touching the ground
         {
             isGrounded = true;
+            isJumping = false;
         }
         else if (collision.CompareTag("Item") && collision.gameObject.activeSelf) // make sure all collectible items are set to "Item" tag
         {
@@ -95,6 +83,14 @@ public class LevelPlayerController : MonoBehaviour
             Inventory.inventory.Add_material(material_Item.Material_name,material_Item.quantity); // add the material to inventory
             collision.gameObject.SetActive(false);
             itemCounter += 1;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Platform"))
+        {
+            isGrounded = false;
         }
     }
 

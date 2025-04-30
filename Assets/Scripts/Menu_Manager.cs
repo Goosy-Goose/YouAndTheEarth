@@ -15,8 +15,8 @@ public class Menu_Manager : MonoBehaviour
     {
         menusList.Add(pauseMenu);
         menusList.Add(buyablesMenu);
-        foreach (GameObject menu in menusList) { 
-            menu.SetActive(false);
+        foreach (GameObject menu in menusList) {
+            if (menu) { menu.SetActive(false); }
         }
         isAMenuOpen = false;
     }
