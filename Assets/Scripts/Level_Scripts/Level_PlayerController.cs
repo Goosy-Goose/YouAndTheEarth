@@ -50,13 +50,15 @@ public class LevelPlayerController : MonoBehaviour
         else { moveValue.y = rigidBody.linearVelocity.y; }
 
         // X MOMENTUM
+        float airRes = 0.05f;
+        if (isGrounded) { airRes = 0.1f; }
         if (rigidBody.linearVelocity.x > 0 && moveValue.x >= 0)
         {
-            moveValue.x = Mathf.Max(moveValue.x, rigidBody.linearVelocity.x) - 0.05f;
+            moveValue.x = Mathf.Max(moveValue.x, rigidBody.linearVelocity.x) - airRes;
         }
         else if (rigidBody.linearVelocity.x < 0 && moveValue.x <= 0)
         {
-            moveValue.x = Mathf.Min(moveValue.x, rigidBody.linearVelocity.x) + 0.05f;
+            moveValue.x = Mathf.Min(moveValue.x, rigidBody.linearVelocity.x) + airRes;
         }
 
         // SET VELOCITY
@@ -66,6 +68,11 @@ public class LevelPlayerController : MonoBehaviour
     public bool isInteractPressed()
     {
         return interactAction.IsPressed();
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
     }
 
     // Code for collecting item //
