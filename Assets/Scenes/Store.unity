@@ -15042,6 +15042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1642270977}
   buyablesMenu: {fileID: 1212189792}
+  exitLvlMenu: {fileID: 0}
+  inventoryMenu: {fileID: 0}
   menusList: []
 --- !u!4 &1110259509
 Transform:
@@ -16201,7 +16203,7 @@ GameObject:
   - component: {fileID: 1927402754}
   - component: {fileID: 1927402753}
   m_Layer: 0
-  m_Name: Store_bg64
+  m_Name: Store_Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

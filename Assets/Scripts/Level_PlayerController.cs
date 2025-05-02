@@ -74,6 +74,7 @@ public class LevelPlayerController : MonoBehaviour
         // isJumping = false;
         if (collision.CompareTag("Platform")) // make sure platform tiles are set to "Platform" tag; check if player is touching the ground
         {
+            // this stuff for if collided on bottom
             isGrounded = true;
             isJumping = false;
         }

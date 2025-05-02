@@ -108,7 +108,7 @@ MonoBehaviour:
   rigidBody: {fileID: 519924906497214450}
   interactionCollider: {fileID: 0}
   speed: 7
-  jumpPower: 10
+  jumpPower: 13
 --- !u!114 &4634525009594067229
 MonoBehaviour:
   m_ObjectHideFlags: 0

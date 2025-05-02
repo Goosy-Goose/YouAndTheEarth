@@ -7,14 +7,20 @@ public class Menu_Manager : MonoBehaviour
     public static Menu_Manager instance;
     public GameObject pauseMenu;
     public GameObject buyablesMenu;
+    public GameObject exitLvlMenu;
+    public GameObject inventoryMenu;
 
     private bool isAMenuOpen;
     [SerializeField] private List<GameObject> menusList;
 
+
     private void Start()
     {
-        menusList.Add(pauseMenu);
-        menusList.Add(buyablesMenu);
+
+        if (pauseMenu) { menusList.Add(pauseMenu); }
+        if (buyablesMenu) { menusList.Add(buyablesMenu); }
+        if (exitLvlMenu) { menusList.Add(exitLvlMenu); }
+        if (inventoryMenu) { menusList.Add(inventoryMenu); }
         foreach (GameObject menu in menusList) {
             if (menu) { menu.SetActive(false); }
         }
@@ -29,12 +35,18 @@ public class Menu_Manager : MonoBehaviour
         {
             if (menu && menu.activeSelf) {  isAMenuOpen=true; break; }
         }
-        
+
+        // SUPER MEGA SCUFFED ESCAPE KEY SHENANIGANS (its the same code for both of them, im just too lazy to make it good
         // if escape key pressed, either close all menus or open the pause menu
-        if (Store_Manager.instance.playerInput.actions["Menu"].WasPressedThisFrame())
+        if (Store_Manager.instance && Store_Manager.instance.playerInput.actions["Menu"].WasPressedThisFrame())
         {
             if (!isAMenuOpen) { openMenu(pauseMenu); }
             else{ closeAllMenus(); }
+        }
+        else if (Level_Manager.instance && Level_Manager.instance.playerInput.actions["Menu"].WasPressedThisFrame())
+        {
+            if (!isAMenuOpen) { openMenu(pauseMenu); }
+            else { closeAllMenus(); }
         }
 
 
