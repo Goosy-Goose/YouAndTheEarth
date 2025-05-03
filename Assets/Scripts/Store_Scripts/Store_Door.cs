@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class Store_Door : Store_Item
 {
 
-    [SerializeField] private List<string> levelNames;
+    private GameObject levelSelectMenu;
     // uses Store_Item Start() function
-    void Start() {
-
-        levelNames = new List<string> { "BeachLevel", "GrassLevel", "ForestLevel" };
+    void Start() 
+    {
+        levelSelectMenu = Menu_Manager.instance.levelSelectMenu;
     }
 
     // Update is called once per frame
@@ -23,9 +23,10 @@ public class Store_Door : Store_Item
     {
         base.doInteraction();
 
-        //SceneManager.LoadScene(sceneName: levelNames[Random.Range(0,4)]);
-        // FOR TESTING PURPOSES ONLY:
-        SceneManager.LoadScene(sceneName: "BeachLevel");
+        Menu_Manager.instance.openMenu(levelSelectMenu);
+            //SceneManager.LoadScene(sceneName: levelNames[Random.Range(0,4)]);
+            // FOR TESTING PURPOSES ONLY:
+            //SceneManager.LoadScene(sceneName: "BeachLevel");
 
     }
 

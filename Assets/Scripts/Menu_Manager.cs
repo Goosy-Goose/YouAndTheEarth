@@ -7,6 +7,7 @@ public class Menu_Manager : MonoBehaviour
     public static Menu_Manager instance;
     public GameObject pauseMenu;
     public GameObject buyablesMenu;
+    public GameObject levelSelectMenu;
     public GameObject exitLvlMenu;
     public GameObject inventoryMenu;
 
@@ -19,6 +20,7 @@ public class Menu_Manager : MonoBehaviour
 
         if (pauseMenu) { menusList.Add(pauseMenu); }
         if (buyablesMenu) { menusList.Add(buyablesMenu); }
+        if (levelSelectMenu) { menusList.Add(levelSelectMenu); }
         if (exitLvlMenu) { menusList.Add(exitLvlMenu); }
         if (inventoryMenu) { menusList.Add(inventoryMenu); }
         foreach (GameObject menu in menusList) {

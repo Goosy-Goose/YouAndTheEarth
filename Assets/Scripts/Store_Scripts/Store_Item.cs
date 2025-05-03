@@ -60,7 +60,7 @@ public class Store_Item : MonoBehaviour
 
     protected virtual void doInteraction()
     {
-        Debug.Log("Store Item interaction");
+        //Debug.Log("Store Item interaction");
     }
 
     

@@ -29,6 +29,8 @@ public class Buyables_Menu : MonoBehaviour
         Menu_Manager.instance.closeMenu(buyableMenu);
     }
 
+    
+
     public void setMenuInfo(string name, bool isUnlocked, string description, Sprite bSprite)
     {
         GameObject nameField = GameObject.Find("BuyableNameTMP");
