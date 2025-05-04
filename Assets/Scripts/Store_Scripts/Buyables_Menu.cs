@@ -54,6 +54,12 @@ public class Buyables_Menu : MonoBehaviour
         }
     }
 
+    public void setUnlockInfo(GameObject buyableToUnlock)
+    {
+        // if inventory can't unlock, do nothing
+        // else, remove stuff from inventory, setlock on buyable to false
+    }
+
     public void Unlock()
     {
 

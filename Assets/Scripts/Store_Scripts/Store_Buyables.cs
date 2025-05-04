@@ -31,6 +31,7 @@ public class Store_Buyables : Store_Item
             // send all the info?
             Sprite buyableSprite = GetComponent<SpriteRenderer>().sprite;
             buyableMenu.GetComponent<Buyables_Menu>().setMenuInfo(buyableName, isUnlocked, description, buyableSprite);
+            // buyableMenu.GetComponent<Buyables_Menu>().setUnlockInfo();
         }
 
     }
