@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Material_Item : MonoBehaviour
 {
-    public string Material_name; 
+    public string materialName; 
     public int quantity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

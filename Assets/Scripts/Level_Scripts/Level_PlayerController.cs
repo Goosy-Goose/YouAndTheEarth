@@ -88,7 +88,7 @@ public class LevelPlayerController : MonoBehaviour
         else if (collision.CompareTag("Item") && collision.gameObject.activeSelf) // make sure all collectible items are set to "Item" tag
         {
             Material_Item material_Item = collision.GetComponent<Material_Item>();
-            Inventory.inventory.Add_material(material_Item.Material_name,material_Item.quantity); // add the material to inventory
+            Inventory.inventory.Add_material(material_Item.materialName,material_Item.quantity); // add the material to inventory
             collision.gameObject.SetActive(false);
             itemCounter += 1;
         }
