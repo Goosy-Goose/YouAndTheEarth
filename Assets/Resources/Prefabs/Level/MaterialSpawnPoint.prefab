@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2949324995457947694}
   m_Layer: 0
   m_Name: MaterialSpawnPoint
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e8870619748453d91e8168324d5e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material_name: NO
+  materialName: 
   quantity: 1
 --- !u!61 &2949324995457947694
 BoxCollider2D:

@@ -1,31 +1,39 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory inventory;
     public Dictionary<string, int> materials; // created dictionary storing material types and amount
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        materials = new Dictionary<string, int> { };
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Dict: " + string.Join(", ", materials.Select(kv => $"{kv.Key}: {kv.Value}")));
     }
 
     private void Awake()
     {
-        if (inventory == null)
+        
+        if (inventory != null)
         {
-            inventory = this;
+            Destroy(gameObject); // Prevent multiple Store_Managers
+
         }
         else
         {
-            Destroy(gameObject); // Prevent multiple Store_Managers
+            inventory = this;
+            materials = new Dictionary<string, int> { };
+            DontDestroyOnLoad(gameObject);
         }
     }
 

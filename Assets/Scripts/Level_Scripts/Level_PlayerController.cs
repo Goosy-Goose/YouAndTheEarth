@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LevelPlayerController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class LevelPlayerController : MonoBehaviour
 
     Vector2 direction;
 
+    private bool canGoHome;
     // Variable(s) for tracking collected items //
     private int itemCounter = 0;
 
@@ -28,12 +30,19 @@ public class LevelPlayerController : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         interactAction = InputSystem.actions.FindAction("Interact");
         jumpAction = InputSystem.actions.FindAction("Jump");
+        canGoHome = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         MovePlayer();
+
+        if (interactAction.IsPressed() && canGoHome)
+        {
+            SceneManager.LoadScene(sceneName: "Store");
+        }
+
     }
 
     void MovePlayer()
@@ -72,7 +81,7 @@ public class LevelPlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        //Debug.Log(collision.name);
     }
 
     // Code for collecting item //
@@ -92,6 +101,10 @@ public class LevelPlayerController : MonoBehaviour
             collision.gameObject.SetActive(false);
             itemCounter += 1;
         }
+        else if (collision.CompareTag("Finish"))
+        {
+            canGoHome = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -99,6 +112,10 @@ public class LevelPlayerController : MonoBehaviour
         if (collision.CompareTag("Platform"))
         {
             isGrounded = false;
+        }
+        else if (collision.CompareTag("Finish"))
+        {
+            canGoHome = false;
         }
     }
 
