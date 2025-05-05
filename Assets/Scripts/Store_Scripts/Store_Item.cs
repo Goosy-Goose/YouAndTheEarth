@@ -63,6 +63,6 @@ public class Store_Item : MonoBehaviour
         //Debug.Log("Store Item interaction");
     }
 
-    
+    public string getPromptText() {  return promptText; }
 
 }

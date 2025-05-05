@@ -1,10 +1,16 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Store_Buyables : Store_Item
 {
+    public bool isUnlocked;
+    public List<Tuple<string, int>> recipe;
+
+
     [SerializeField] private string buyableName;
     [SerializeField] private string description;
-    [SerializeField] private bool isUnlocked;
 
     private GameObject buyableMenu;
 
@@ -14,6 +20,8 @@ public class Store_Buyables : Store_Item
         buyableMenu = Menu_Manager.instance.buyablesMenu;
         setLock(false);
     }
+
+    void Awake() { recipe = new List<Tuple<string, int>>(); }
 
     protected override void Update()
     {
@@ -28,10 +36,14 @@ public class Store_Buyables : Store_Item
 
         if (Menu_Manager.instance.openMenu(buyableMenu))
         {
+            var buyComp = buyableMenu.GetComponent<Buyables_Menu>();
+
+            // first set the current buyable object
+            buyComp.setCurrBuyable(this);
             // send all the info?
             Sprite buyableSprite = GetComponent<SpriteRenderer>().sprite;
-            buyableMenu.GetComponent<Buyables_Menu>().setMenuInfo(buyableName, isUnlocked, description, buyableSprite);
-            // buyableMenu.GetComponent<Buyables_Menu>().setUnlockInfo();
+            if (!isUnlocked) { buyComp.setCanUnlock(recipe); }
+            buyComp.setMenuInfo(buyableName, isUnlocked, description, buyableSprite, recipe);
         }
 
     }
@@ -43,4 +55,13 @@ public class Store_Buyables : Store_Item
         if (isUnlocked) { GetComponent<SpriteRenderer>().color = Color.white; }
         else { GetComponent<SpriteRenderer>().color = Color.black; }
     }
+
+    public void addRecipeItem(Tuple<string,int> recipeItem)
+    {
+        recipe.Add(recipeItem);
+        //Debug.Log($"Added {newItem.materialName} with quantity {newItem.quantity} to {promptText}'s recipe.");
+    }
+
+    public List<Tuple<string, int>> getRecipe() { return recipe; }
+    public string getName() { return buyableName; }
 }

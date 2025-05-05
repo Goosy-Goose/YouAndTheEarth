@@ -25,6 +25,11 @@ public class Menu : MonoBehaviour
         Menu_Manager.instance.closeMenu(pauseMenu);
     }
 
+    public void SaveGame()
+    {
+        Data_Persistence_Manager.instance.SaveGame();
+    }
+
     public void GoStartPage()
     {
         Time.timeScale = 1;

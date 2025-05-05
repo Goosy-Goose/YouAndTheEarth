@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 public class StartPage : MonoBehaviour
 {
     public void OnPlayButton(){
-        SceneManager.LoadScene(1);
+        Data_Persistence_Manager.instance.NewGame();
+        SceneManager.LoadScene(sceneName: "Store");
+    }
+
+    public void OnLoadButton()
+    {
+        Data_Persistence_Manager.instance.LoadGame();
+        SceneManager.LoadScene(sceneName: "Store");
     }
 
     public void OnQuitButton(){
